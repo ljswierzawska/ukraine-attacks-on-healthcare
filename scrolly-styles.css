@@ -1,0 +1,50 @@
+/* Scrollytelling layout */
+
+.scrolly-container {
+    position: relative;
+}
+
+.sticky-thing {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3E424B;
+    z-index: 0;
+}
+
+.sticky-thing > div {
+    width: 100%;
+    max-width: 842px;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.steps-container {
+    position: relative;
+    z-index: 10;
+    margin-top: -100vh;
+    padding-top: 75vh;
+    padding-bottom: 80vh;
+    pointer-events: none;
+}
+
+.step {
+    margin-bottom: 80vh;
+    pointer-events: all;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2em;
+}
+
+.step > * {
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1em 1.2em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
