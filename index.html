@@ -24,6 +24,67 @@
             margin: auto;
         }
 
+        .hero {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            box-sizing: border-box;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center bottom;
+            display: block;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            padding: 2em 2.5em;
+            max-width: 700px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: clamp(1.8em, 4vw, 3em);
+            font-weight: bold;
+            line-height: 1.15;
+            color: #ffffff;
+            margin: 0 0 0.4em 0;
+        }
+
+        .hero-text .subhead {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: clamp(0.85em, 1.5vw, 1em);
+            color: #d4d4d4;
+            line-height: 1.5;
+            margin: 0;
+            max-width: 700px;
+        }
+
+        .byline-date {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 0.7em;
+            letter-spacing: 0.1em;
+            color: #a0a0a0;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+
         .header {
             padding: 3em 0;
         }
@@ -53,16 +114,6 @@
         }
 
 
-        h1 {
-            font-family: 'EB Garamond', serif;
-            font-weight: bold;
-            font-size: 3em;
-            line-height: 1.1;
-        }
-
-        .subhead {
-            font-family: 'EB Garamond', serif;
-        }
 
         body {
             font-family: Helvetica, Arial, sans-serif;
@@ -77,10 +128,12 @@
         }
 
         p {
+            font-family: 'Times New Roman', Times, serif;
             line-height: 1.6;
             margin: 0;
             padding-bottom: 1.2em;
         }
+
 
         .full-width figure {
             text-align: center;
@@ -120,14 +173,18 @@
 </head>
 
 <body>
+    <div class="hero">
+        <div class="hero-inner">
+            <img class="hero-bg" src="wheat_stocks.png" alt="Wheat stalks illustration">
+            <div class="hero-text">
+                <h1>The Other Front: Russia's Assault on Ukraine's Healthcare</h1>
+                <p class="subhead">In five years of full-scale war, Russia has attacked Ukraine's healthcare system nearly 3,000 times, hitting facilities, workers, and supplies across the country. The World Bank estimates the damage will cost more than $19 billion to repair.</p>
+                <p class="byline-date">by Luiza Swierzawska &nbsp;&middot;&nbsp; April 12, 2026</p>
+            </div>
+        </div>
+    </div>
+
     <div class="content">
-        <div class="header">
-            <h1>The Other Front: Russia's Assault on Ukraine's Healthcare</h1>
-            <p class="subhead">Since Russia's full-scale invasion, WHO has documented nearly 3,000 attacks on Ukraine's healthcare system. These attacks have accumulated $19 billion in damages, and the human and financial toll just keeps growing.</p>
-        </div>
-        <div class="byline">
-            <p>By Luiza Swierzawska</p>
-        </div>
         <p>The Russian invasion has inflicted unprecedented damage on Ukraine's healthcare system — striking health workers, facilities, ambulances, and medical warehouses across the country. Over the past five years, Russian attacks have driven Ukraine's healthcare infrastructure into a crisis that will cost billions of dollars to recover from. The data shows no signs that the destruction is slowing.</p>
         <p>Since the war began, which on February 24 entered its fifth year, the WHO has tracked attacks on healthcare in Ukraine. As of April 2026, the database had registered over 2,900. Nearly half occurred in the first year of the invasion, but 2025 recorded the second-highest total, with attacks rising 20% from the year before.</p>
     </div>
@@ -826,37 +883,37 @@
             <div class="step" id="c2-step-intro" style="min-height: 1px;"></div>
             <div class="step" id="c2-step-heavy">
                 <div>
-                    <p><strong>Violence with heavy weapons — <span class="stat">2,655</span></strong></p>
+                    <p><strong>Violence with heavy weapons</strong></p>
                     <p>Violence with heavy weapons — including firearms, tanks, missiles, bombs, and mortars — is the most frequently recorded category. Documented <span class="stat">2,655</span> times since the start of the war, the figure points to healthcare attacks being rarely isolated incidents but part of broader military operations.</p>
                 </div>
             </div>
             <div class="step" id="c2-step-removal">
                 <div>
-                    <p><strong>Removal of health care assets — <span class="stat">225</span></strong></p>
+                    <p><strong>Removal of health care assets</strong></p>
                     <p>In <span class="stat">225</span> cases, the target was the removal of healthcare assets — including transport, supplies, and materials. In one documented case, the <a href="https://phr.org/our-work/resources/russias-assault-on-ukraines-health-care-system/">Mariupol City Council</a> reported that around <span class="stat">60</span> ventilators had been stolen from city hospitals, equipment that was critical at the height of the Covid pandemic.</p>
                 </div>
             </div>
             <div class="step" id="c2-step-militarization">
                 <div>
-                    <p><strong>Militarization of a health care asset — <span class="stat">103</span></strong></p>
+                    <p><strong>Militarization of a health care asset</strong></p>
                     <p>In <span class="stat">103</span> cases, WHO recorded militarization of a healthcare asset — when military forces use a medical facility for non-medical purposes, such as a command post, barracks, or weapons storage site. Under international humanitarian law, this strips the facility of its protected status.</p>
                 </div>
             </div>
             <div class="step" id="c2-step-individual">
                 <div>
-                    <p><strong>Violence with individual weapons — <span class="stat">70</span></strong></p>
+                    <p><strong>Violence with individual weapons</strong></p>
                     <p>Violence with individual weapons, recorded <span class="stat">70</span> times, involves the use of knives, bricks, clubs, guns, grenades, and improvised explosive devices (IEDs).</p>
                 </div>
             </div>
             <div class="step" id="c2-step-psychological">
                 <div>
-                    <p><strong>Psychological violence, threat of violence, intimidation — <span class="stat">60</span></strong></p>
+                    <p><strong>Psychological violence, threat of violence, intimidation</strong></p>
                     <p>WHO recorded <span class="stat">60</span> cases of psychological violence, threats, and intimidation directed at healthcare workers or patients.</p>
                 </div>
             </div>
             <div class="step" id="c2-step-obstruction">
                 <div>
-                    <p><strong>Obstruction to health care delivery — <span class="stat">56</span></strong></p>
+                    <p><strong>Obstruction to health care delivery</strong></p>
                     <p>In <span class="stat">56</span> cases, attacks were classified as obstruction of healthcare delivery — a category that can take physical, administrative, or legal forms.</p>
                 </div>
             </div>
@@ -876,17 +933,12 @@
         <div class="steps-container">
             <div class="step photo-step" id="photo-step-one">
                 <div class="photo-text-box">
-                    <p>TEXT PLACEHOLDER 1</p>
+                    <p>Those living in the rural areas are the most impacted. Fuel shortages and damaged roads only worsen the access to remaining public health services.</p>
                 </div>
             </div>
             <div class="step photo-step" id="photo-step-two">
                 <div class="photo-text-box">
-                    <p>TEXT PLACEHOLDER 2</p>
-                </div>
-            </div>
-            <div class="step photo-step" id="photo-step-three">
-                <div class="photo-text-box">
-                    <p>TEXT PLACEHOLDER 3</p>
+                    <p>Now Ukrainians are living with the aftermath of the coldest winters the country has seen in over a decade.</p>
                 </div>
             </div>
         </div>
@@ -1161,6 +1213,28 @@
                     }
                 });
             window.addEventListener("resize", scroller2.resize);
+        })();
+    </script>
+
+    <script>
+        (function () {
+            const heroText = document.querySelector('.hero-text');
+            const heroBg = document.querySelector('.hero-bg');
+            const heroHeight = document.querySelector('.hero').offsetHeight;
+
+            function onScroll() {
+                const scrollY = window.scrollY;
+                const progress = Math.min(scrollY / heroHeight, 1);
+
+                // text: fade out and drift upward
+                heroText.style.opacity = 1 - progress * 1.8;
+                heroText.style.transform = `translateY(${-scrollY * 0.25}px)`;
+
+                // image: move up at half speed (parallax)
+                heroBg.style.transform = `translateY(${scrollY * 0.4}px)`;
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
         })();
     </script>
 </body>
