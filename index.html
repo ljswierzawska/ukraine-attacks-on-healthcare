@@ -22,6 +22,7 @@
         .content {
             max-width: 640px;
             margin: auto;
+            padding-top: 1.5em;
         }
 
         .hero {
@@ -36,11 +37,13 @@
             height: 100%;
             display: flex;
             align-items: flex-start;
-            justify-content: flex-start;
+            justify-content: center;
+            padding-top: 10vh;
             box-sizing: border-box;
         }
 
-        .hero-bg {
+        .hero-bg,
+        .hero-bg img {
             position: absolute;
             inset: 0;
             width: 100%;
@@ -53,7 +56,7 @@
         .hero-text {
             position: relative;
             z-index: 2;
-            text-align: left;
+            text-align: center;
             padding: 2em 2.5em;
             max-width: 700px;
         }
@@ -68,7 +71,8 @@
         }
 
         .hero-text .subhead {
-            font-family: Helvetica, Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
             font-size: clamp(0.85em, 1.5vw, 1em);
             color: #d4d4d4;
             line-height: 1.5;
@@ -77,12 +81,12 @@
         }
 
         .byline-date {
-            font-family: Helvetica, Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             font-size: 0.7em;
             letter-spacing: 0.1em;
-            color: #a0a0a0;
-            margin-top: 2em;
-            margin-bottom: 2em;
+            color: #b8b8b8;
+            margin-top: 1em;
+            margin-bottom: 0;
         }
 
         .header {
@@ -94,11 +98,19 @@
         }
 
         .footer {
-            background: #3E424B;
-            text-align: center;
-            font-size: 0.8em;
             margin-top: 4em;
-            padding: 4em 0;
+            height: 35vh;
+            background-image: url('template-2-mobile.png');
+            background-size: cover;
+            background-position: center bottom;
+        }
+
+        @media (min-width: 490px) {
+            .footer { background-image: url('template-2-laptop.png'); }
+        }
+
+        @media (min-width: 620px) {
+            .footer { background-image: url('template-2-medium.png'); }
         }
 
         figure {
@@ -175,17 +187,21 @@
 <body>
     <div class="hero">
         <div class="hero-inner">
-            <img class="hero-bg" src="wheat_stocks.png" alt="Wheat stalks illustration">
+            <picture class="hero-bg">
+                <source media="(min-width: 620px)" srcset="template-2-medium.png">
+                <source media="(min-width: 490px)" srcset="template-2-laptop.png">
+                <img src="template-2-mobile.png" alt="Attacks on Ukraine's healthcare">
+            </picture>
             <div class="hero-text">
                 <h1>The Other Front: Russia's Assault on Ukraine's Healthcare</h1>
-                <p class="subhead">In five years of full-scale war, Russia has attacked Ukraine's healthcare system nearly 3,000 times, hitting facilities, workers, and supplies across the country. The World Bank estimates the damage will cost more than $19 billion to repair.</p>
+                <p class="subhead">In five years of full-scale war, Russia has attacked Ukraine's healthcare system nearly 3,000 times, hitting facilities, workers, and medical supplies across the country. The World Bank estimates the damage will cost more than $19 billion to repair.</p>
                 <p class="byline-date">by Luiza Swierzawska &nbsp;&middot;&nbsp; April 12, 2026</p>
             </div>
         </div>
     </div>
 
     <div class="content">
-        <p>The Russian invasion has inflicted unprecedented damage on Ukraine's healthcare system — striking health workers, facilities, ambulances, and medical warehouses across the country. Over the past five years, Russian attacks have driven Ukraine's healthcare infrastructure into a crisis that will cost billions of dollars to recover from. The data shows no signs that the destruction is slowing.</p>
+        <p>The Russian invasion has inflicted unprecedented damage on Ukraine's healthcare system — striking healthcare workers, facilities, ambulances, and medical warehouses across the country. Over the past five years, Russian attacks have driven Ukraine's healthcare infrastructure into a crisis that will cost billions of dollars to recover from. Data collected on these attacks by the World Health Organization (WHO) shows no signs that the destruction is slowing.</p>
         <p>Since the war began, which on February 24 entered its fifth year, the WHO has tracked attacks on healthcare in Ukraine. As of April 2026, the database had registered over 2,900. Nearly half occurred in the first year of the invasion, but 2025 recorded the second-highest total, with attacks rising 20% from the year before.</p>
     </div>
     <section id="scrolly-ai2html" class="scrolly-container">
@@ -751,184 +767,3721 @@
 
     <div class="content">
         <p>According to World Bank estimates, recovering from these losses would require more than $19.4 billion.</p>
-        <p>The pressure on the healthcare system is twofold. Rising rates of war-related trauma have intensified demand across the full spectrum of medical response — from surgery and blood products to mental health care, infection control, and rehabilitation. But these needs are increasingly difficult to meet in a country where healthcare infrastructure has itself become a target. WHO notes that the crisis is compounded by the "cascading effects of strikes on civilian infrastructure, including thermal power plants that underpin the country's power grid."</p>
-        <p>WHO classifies attacks into several categories, which often occur in combination. The most common type, by far, is violence with heavy weapons.</p>
+        <p>But it is not only physical reconstruction that Ukraine faces. The ongoing pressure on the healthcare system is twofold. Rising rates of war-related trauma have intensified demand across the full spectrum of medical response — from surgery and blood products to mental health care, infection control, and rehabilitation. But these needs are increasingly difficult to meet in a country where healthcare infrastructure has itself become a target. The WHO notes that the crisis is compounded by the "cascading effects of strikes on civilian infrastructure, including thermal power plants that underpin the country's power grid."</p>
+        <p>WHO classifies attacks into several categories, which frequently occur in combination. The most common type, by far, is violence with heavy weapons.</p>
     </div>
 
-    <section id="scrolly-chart2" class="scrolly-container">
-        <div class="sticky-thing">
+    <div id="chart2-section">
+        <div id="chart2-interactive">
+            <button class="chart2-arrow" id="chart2-prev" aria-label="Previous">&#8592;</button>
             <div id="chart2-wrapper">
+<!-- Generated by ai2html v0.102.0 - 2026-04-26 23:59 -->
+<!-- ai file: template-chart-2-main.ai -->
+<style media="screen,print">
+	#g-template-chart-2-main-box ,
+	#g-template-chart-2-main-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-template-chart-2-main-box p {
+		margin:0;
+	}
+	#g-template-chart-2-main-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-template-chart-2-main-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-template-chart-2-main-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-template-chart-2-main-box .g-aiPointText p { white-space: nowrap; }
+	#g-template-chart-2-main-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-main-medium p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:8px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-main-medium .g-pstyle0 {
+		height:8px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-main-medium .g-pstyle1 {
+		line-height:54px;
+		font-size:45px;
+	}
+	#g-template-chart-2-main-medium .g-pstyle2 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-main-medium .g-pstyle3 {
+		height:8px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-medium .g-pstyle4 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-medium .g-pstyle5 {
+		line-height:6px;
+		font-size:5px;
+	}
+	#g-template-chart-2-main-medium .g-pstyle6 {
+		line-height:9px;
+		height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-medium .g-pstyle7 {
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-main-medium .g-pstyle8 {
+		font-weight:700;
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-main-medium .g-pstyle9 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-medium .g-pstyle10 {
+		line-height:19px;
+		font-size:16px;
+	}
+	#g-template-chart-2-main-medium .g-pstyle11 {
+		line-height:32px;
+		font-size:27px;
+	}
+	#g-template-chart-2-main-medium .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-main-medium .g-cstyle1 {
+		font-size:9px;
+	}
+	#g-template-chart-2-main-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-main-laptop p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-main-laptop .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-main-laptop .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-main-laptop .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-main-laptop .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-laptop .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-laptop .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-main-laptop .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-laptop .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-main-laptop .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-main-laptop .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-laptop .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-main-laptop .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-main-laptop .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-main-laptop .g-cstyle1 {
+		font-size:7px;
+	}
+	#g-template-chart-2-main-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-main-mobile p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:7px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-main-mobile .g-pstyle0 {
+		height:7px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-main-mobile .g-pstyle1 {
+		line-height:47px;
+		font-size:39px;
+	}
+	#g-template-chart-2-main-mobile .g-pstyle2 {
+		line-height:6px;
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-main-mobile .g-pstyle3 {
+		height:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-mobile .g-pstyle4 {
+		line-height:6px;
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-mobile .g-pstyle5 {
+		line-height:6px;
+	}
+	#g-template-chart-2-main-mobile .g-pstyle6 {
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-mobile .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-main-mobile .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-main-mobile .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:8px;
+		text-align:justify;
+	}
+	#g-template-chart-2-main-mobile .g-pstyle10 {
+		line-height:17px;
+		font-size:14px;
+	}
+	#g-template-chart-2-main-mobile .g-pstyle11 {
+		line-height:28px;
+		font-size:23px;
+	}
+	#g-template-chart-2-main-mobile .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-main-mobile .g-cstyle1 {
+		font-size:8px;
+	}
 
-                <!-- chart_2 ai2html -->
-                <style media="screen,print">
-                    #g-chart_2-box ,
-                    #g-chart_2-box .g-artboard {
-                        margin:0 auto;
-                    }
-                    #g-chart_2-box p {
-                        margin:0;
-                    }
-                    #g-chart_2-box .g-aiAbs {
-                        position:absolute;
-                    }
-                    #g-chart_2-box .g-aiImg {
-                        position:absolute;
-                        top:0;
-                        display:block;
-                        width:100% !important;
-                    }
-                    #g-chart_2-box .g-aiSymbol {
-                        position: absolute;
-                        box-sizing: border-box;
-                    }
-                    #g-chart_2-box .g-aiPointText p { white-space: nowrap; }
-                    #g-chart_2-Obszar_roboczy_1 {
-                        position:relative;
-                        overflow:hidden;
-                    }
-                    #g-chart_2-Obszar_roboczy_1 p {
-                        font-family:helvetica,arial,sans-serif;
-                        font-weight:bold;
-                        line-height:8px;
-                        height:auto;
-                        filter:alpha(opacity=100);
-                        -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-                        opacity:1;
-                        letter-spacing:0em;
-                        font-size:7px;
-                        text-align:left;
-                        color:rgb(255,255,255);
-                        text-transform:none;
-                        padding-bottom:0;
-                        padding-top:0;
-                        mix-blend-mode:normal;
-                        font-style:normal;
-                        position:static;
-                    }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle0 { height:8px; text-align:justify; color:rgb(138,175,196); }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle1 { line-height:60px; font-size:50px; }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle2 { line-height:7px; height:7px; font-size:6px; text-align:justify; color:rgb(138,175,196); }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle3 { height:8px; text-align:justify; }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle4 { line-height:7px; height:7px; font-size:6px; text-align:justify; }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle5 { line-height:7px; font-size:6px; }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle6 { line-height:10px; height:10px; font-size:8px; text-align:justify; }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle7 { line-height:14px; font-size:12px; }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle8 { font-weight:700; line-height:14px; font-size:12px; }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle9 { font-weight:700; line-height:12px; font-size:10px; text-align:justify; }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle10 { line-height:22px; font-size:18px; }
-                    #g-chart_2-Obszar_roboczy_1 .g-pstyle11 { line-height:36px; font-size:30px; }
-                    #g-chart_2-Obszar_roboczy_1 .g-cstyle0 { font-weight:700; }
-                    #g-chart_2-Obszar_roboczy_1 .g-cstyle1 { font-size:10px; }
-                </style>
+</style>
 
-                <div id="g-chart_2-box" class="ai2html">
-                    <div id="g-chart_2-Obszar_roboczy_1" class="g-artboard" style="max-width: 480px;max-height: 480px" data-aspect-ratio="1" data-min-width="0">
-                        <div style="padding: 0 0 100% 0;"></div>
-                        <img id="g-chart_2-Obszar_roboczy_1-img" class="g-aiImg" alt="" src="chart_2-Obszar_roboczy_1.png"/>
-                        <div id="g-ai0-1" class="g-Warstwa_1 g-aiAbs g-aiPointText" style="top:2.5403%;margin-top:-5.2px;left:81.4376%;width:53px;">
-                            <p class="g-pstyle0">Unknown</p>
-                        </div>
-                        <div id="g-ai0-2" class="g-Warstwa_1 g-aiAbs" style="top:4.1667%;left:4.0529%;width:76.25%;">
-                            <p class="g-pstyle1">Violence with heavy </p>
-                            <p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
-                        </div>
-                        <div id="g-ai0-3" class="g-Warstwa_1 g-aiAbs g-aiPointText" style="top:14.0672%;margin-top:-4.5px;left:81.9548%;width:29px;">
-                            <p class="g-pstyle2">40</p>
-                        </div>
-                        <div id="g-ai0-4" class="g-Warstwa_1 g-aiAbs g-aiPointText" style="top:17.1653%;margin-top:-9.4px;left:81.4376%;width:87px;">
-                            <p class="g-pstyle3">Obstruction to </p>
-                            <p class="g-pstyle3">health care delivery</p>
-                        </div>
-                        <div id="g-ai0-5" class="g-Warstwa_1 g-aiAbs g-aiPointText" style="top:22.8172%;margin-top:-4.5px;left:81.8542%;width:29px;">
-                            <p class="g-pstyle4">56</p>
-                        </div>
-                        <div id="g-ai0-6" class="g-Warstwa_1 g-aiAbs g-aiPointText" style="top:27.4152%;margin-top:-13.6px;left:81.4376%;width:101px;">
-                            <p class="g-pstyle3">Psychological violence,</p>
-                            <p class="g-pstyle3">threat of violence,</p>
-                            <p class="g-pstyle3">intimidation</p>
-                        </div>
-                        <div id="g-ai0-7" class="g-Warstwa_1 g-aiAbs" style="top:31.875%;left:81.8738%;width:3.3333%;">
-                            <p class="g-pstyle5">60</p>
-                        </div>
-                        <div id="g-ai0-8" class="g-Warstwa_1 g-aiAbs g-aiPointText" style="top:37.3256%;margin-top:-11.2px;left:81.4451%;width:96px;">
-                            <p class="g-pstyle6">Violence with </p>
-                            <p class="g-pstyle6">individual weapons</p>
-                        </div>
-                        <div id="g-ai0-9" class="g-Warstwa_1 g-aiAbs g-aiPointText" style="top:44.2069%;margin-top:-5.2px;left:81.8955%;width:30px;">
-                            <p class="g-pstyle3">70</p>
-                        </div>
-                        <div id="g-ai0-10" class="g-Warstwa_1 g-aiAbs" style="top:45.625%;left:81.4375%;width:16.0417%;">
-                            <p class="g-pstyle7">Militarization of a health</p>
-                            <p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
-                        </div>
-                        <div id="g-ai0-11" class="g-Warstwa_1 g-aiAbs" style="top:59.1667%;left:81.7901%;width:3.5417%;">
-                            <p class="g-pstyle9">103</p>
-                        </div>
-                        <div id="g-ai0-12" class="g-Warstwa_1 g-aiAbs" style="top:63.125%;left:81.4844%;width:16.6667%;">
-                            <p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
-                        </div>
-                        <div id="g-ai0-13" class="g-Warstwa_1 g-aiAbs" style="top:90.4167%;left:3.6299%;width:27.5%;">
-                            <p class="g-pstyle11">2655</p>
-                        </div>
-                        <div id="g-ai0-14" class="g-Warstwa_1 g-aiAbs" style="top:94.7917%;left:81.8492%;width:5.8333%;">
-                            <p class="g-pstyle7">225</p>
-                        </div>
+<div id="g-template-chart-2-main-box" class="ai2html">
 
-                    </div>
-                </div>
+	<!-- Artboard: medium -->
+	<div id="g-template-chart-2-main-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-template-chart-2-main-medium-img" class="g-aiImg" alt="" src="template-chart-2-main-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:2.1646%;margin-top:-5.2px;left:73.7007%;width:50px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:3.7647%;left:20.0817%;width:52.9032%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.6706%;margin-top:-4.1px;left:74.059%;width:28px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.9314%;margin-top:-9px;left:73.7007%;width:81px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.6118%;margin-top:-4.1px;left:73.9893%;width:28px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.2277%;margin-top:-12.7px;left:73.7007%;width:93px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:31.7647%;left:74.0029%;width:2.2581%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.199%;margin-top:-10.1px;left:73.7061%;width:88px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.047%;margin-top:-5.2px;left:74.018%;width:29px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs" style="top:45.4118%;left:73.7007%;width:11.129%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs" style="top:59.2941%;left:73.9449%;width:2.4194%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs" style="top:63.2941%;left:73.7331%;width:11.6129%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:90.8235%;left:19.7886%;width:19.0323%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs" style="top:95.2941%;left:73.9859%;width:4.0323%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
 
+	<!-- Artboard: laptop -->
+	<div id="g-template-chart-2-main-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-template-chart-2-main-laptop-img" class="g-aiImg" alt="" src="template-chart-2-main-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:1.989%;margin-top:-4px;left:72.7828%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:3.7143%;left:16.6986%;width:55.3061%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.5621%;margin-top:-3.5px;left:73.1573%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.8742%;margin-top:-7.1px;left:72.7828%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.4192%;margin-top:-3.5px;left:73.0845%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.9021%;margin-top:-10.2px;left:72.7828%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:31.4286%;left:73.0987%;width:2.449%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.1419%;margin-top:-8px;left:72.7884%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.989%;margin-top:-4px;left:73.1148%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs" style="top:45.1429%;left:72.7825%;width:11.6327%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs" style="top:59.1429%;left:73.0381%;width:2.449%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs" style="top:63.1429%;left:72.8165%;width:12.0408%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:90.5714%;left:16.3921%;width:20%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs" style="top:95.1429%;left:73.0809%;width:4.2857%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-template-chart-2-main-mobile" class="g-artboard" style="max-width: 375px;max-height: 405px" data-aspect-ratio="0.926" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 107.9467% 0;"></div>
+		<img id="g-template-chart-2-main-mobile-img" class="g-aiImg" alt="" src="template-chart-2-main-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:4.6065%;margin-top:-4.6px;left:81.4372%;width:46px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:6.1759%;left:4.4555%;width:76%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:15.2239%;margin-top:-3.6px;left:81.9518%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:18.2587%;margin-top:-7.9px;left:81.4372%;width:73px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:23.3761%;margin-top:-3.6px;left:81.8516%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.4643%;margin-top:-11.2px;left:81.4372%;width:83px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs" style="top:31.6206%;left:81.8713%;width:3.2%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:36.6597%;margin-top:-8.4px;left:81.4451%;width:79px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.897%;margin-top:-4.6px;left:81.8927%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs" style="top:44.2194%;left:81.4374%;width:16%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs" style="top:56.8182%;left:81.7881%;width:3.4667%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs" style="top:60.5237%;left:81.484%;width:16.5333%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs" style="top:85.4743%;left:4.0347%;width:27.4667%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs" style="top:89.6739%;left:81.8469%;width:5.8667%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2026-04-26 23:59 -->
+
+<!-- Generated by ai2html v0.102.0 - 2026-04-27 00:19 -->
+<!-- ai file: template-chart-2-1.ai -->
+<style media="screen,print">
+	#g-template-chart-2-1-box ,
+	#g-template-chart-2-1-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-template-chart-2-1-box p {
+		margin:0;
+	}
+	#g-template-chart-2-1-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-template-chart-2-1-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-template-chart-2-1-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-template-chart-2-1-box .g-aiPointText p { white-space: nowrap; }
+	#g-template-chart-2-1-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-1-medium p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:8px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-1-medium .g-pstyle0 {
+		height:8px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-1-medium .g-pstyle1 {
+		line-height:54px;
+		font-size:45px;
+	}
+	#g-template-chart-2-1-medium .g-pstyle2 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-1-medium .g-pstyle3 {
+		height:8px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-medium .g-pstyle4 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-medium .g-pstyle5 {
+		line-height:6px;
+		font-size:5px;
+	}
+	#g-template-chart-2-1-medium .g-pstyle6 {
+		line-height:9px;
+		height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-medium .g-pstyle7 {
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-1-medium .g-pstyle8 {
+		font-weight:700;
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-1-medium .g-pstyle9 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-medium .g-pstyle10 {
+		line-height:19px;
+		font-size:16px;
+	}
+	#g-template-chart-2-1-medium .g-pstyle11 {
+		line-height:32px;
+		font-size:27px;
+	}
+	#g-template-chart-2-1-medium .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-1-medium .g-cstyle1 {
+		font-size:9px;
+	}
+	#g-template-chart-2-1-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-1-laptop p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-1-laptop .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-1-laptop .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-1-laptop .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-1-laptop .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-laptop .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-laptop .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-1-laptop .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-laptop .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-1-laptop .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-1-laptop .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-laptop .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-1-laptop .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-1-laptop .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-1-laptop .g-cstyle1 {
+		font-size:7px;
+	}
+	#g-template-chart-2-1-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-1-mobile p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-1-mobile .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-1-mobile .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-1-mobile .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-1-mobile .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-mobile .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-mobile .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-1-mobile .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-mobile .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-1-mobile .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-1-mobile .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-1-mobile .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-1-mobile .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-1-mobile .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-1-mobile .g-cstyle1 {
+		font-size:7px;
+	}
+
+</style>
+
+<div id="g-template-chart-2-1-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-template-chart-2-1-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-template-chart-2-1-medium-img" class="g-aiImg" alt="" src="template-chart-2-1-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:2.1646%;margin-top:-5.2px;left:73.7007%;width:50px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:3.7647%;left:20.0817%;width:52.9032%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.6706%;margin-top:-4.1px;left:74.059%;width:28px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.9314%;margin-top:-9px;left:73.7007%;width:81px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.6118%;margin-top:-4.1px;left:73.9893%;width:28px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.2277%;margin-top:-12.7px;left:73.7007%;width:93px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:31.7647%;left:74.0029%;width:2.2581%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.199%;margin-top:-10.1px;left:73.7061%;width:88px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.047%;margin-top:-5.2px;left:74.018%;width:29px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs" style="top:45.4118%;left:73.7007%;width:11.129%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs" style="top:59.2941%;left:73.9449%;width:2.4194%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs" style="top:63.2941%;left:73.7331%;width:11.6129%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:90.8235%;left:19.7886%;width:19.0323%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs" style="top:95.2941%;left:73.9859%;width:4.0323%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-template-chart-2-1-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-template-chart-2-1-laptop-img" class="g-aiImg" alt="" src="template-chart-2-1-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:1.989%;margin-top:-4px;left:72.7828%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:3.7143%;left:16.6986%;width:55.3061%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.5621%;margin-top:-3.5px;left:73.1573%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.8742%;margin-top:-7.1px;left:72.7828%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.4192%;margin-top:-3.5px;left:73.0845%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.9021%;margin-top:-10.2px;left:72.7828%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:31.4286%;left:73.0987%;width:2.449%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.1419%;margin-top:-8px;left:72.7884%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.989%;margin-top:-4px;left:73.1148%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs" style="top:45.1429%;left:72.7825%;width:11.6327%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs" style="top:59.1429%;left:73.0381%;width:2.449%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs" style="top:63.1429%;left:72.8165%;width:12.0408%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:90.5714%;left:16.3921%;width:20%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs" style="top:95.1429%;left:73.0809%;width:4.2857%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-template-chart-2-1-mobile" class="g-artboard" style="max-width: 375px;max-height: 405px" data-aspect-ratio="0.926" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 107.9467% 0;"></div>
+		<img id="g-template-chart-2-1-mobile-img" class="g-aiImg" alt="" src="template-chart-2-1-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.6604%;margin-top:-4px;left:80.1115%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:8.1522%;left:6.8281%;width:72.2667%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.6668%;margin-top:-3.5px;left:80.6008%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:19.5305%;margin-top:-7.1px;left:80.1115%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.3249%;margin-top:-3.5px;left:80.5057%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.4479%;margin-top:-10.2px;left:80.1115%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs" style="top:32.3617%;left:80.5243%;width:3.2%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.0545%;margin-top:-8px;left:80.1188%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.9747%;margin-top:-4px;left:80.5453%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs" style="top:44.2194%;left:80.1112%;width:15.2%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs" style="top:56.0771%;left:80.445%;width:3.2%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs" style="top:59.7826%;left:80.1556%;width:15.7333%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs" style="top:83.498%;left:6.4276%;width:26.1333%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs" style="top:87.4506%;left:80.501%;width:5.6%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2026-04-27 00:19 -->
+
+<!-- Generated by ai2html v0.102.0 - 2026-04-27 00:22 -->
+<!-- ai file: template-chart-2-2.ai -->
+<style media="screen,print">
+	#g-template-chart-2-2-box ,
+	#g-template-chart-2-2-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-template-chart-2-2-box p {
+		margin:0;
+	}
+	#g-template-chart-2-2-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-template-chart-2-2-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-template-chart-2-2-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-template-chart-2-2-box .g-aiPointText p { white-space: nowrap; }
+	#g-template-chart-2-2-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-2-medium p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:8px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-2-medium .g-pstyle0 {
+		height:8px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-2-medium .g-pstyle1 {
+		line-height:54px;
+		font-size:45px;
+	}
+	#g-template-chart-2-2-medium .g-pstyle2 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-2-medium .g-pstyle3 {
+		height:8px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-medium .g-pstyle4 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-medium .g-pstyle5 {
+		line-height:6px;
+		font-size:5px;
+	}
+	#g-template-chart-2-2-medium .g-pstyle6 {
+		line-height:9px;
+		height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-medium .g-pstyle7 {
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-2-medium .g-pstyle8 {
+		font-weight:700;
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-2-medium .g-pstyle9 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-medium .g-pstyle10 {
+		line-height:19px;
+		font-size:16px;
+	}
+	#g-template-chart-2-2-medium .g-pstyle11 {
+		line-height:32px;
+		font-size:27px;
+	}
+	#g-template-chart-2-2-medium .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-2-medium .g-cstyle1 {
+		font-size:9px;
+	}
+	#g-template-chart-2-2-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-2-laptop p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-2-laptop .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-2-laptop .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-2-laptop .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-2-laptop .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-laptop .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-laptop .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-2-laptop .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-laptop .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-2-laptop .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-2-laptop .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-laptop .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-2-laptop .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-2-laptop .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-2-laptop .g-cstyle1 {
+		font-size:7px;
+	}
+	#g-template-chart-2-2-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-2-mobile p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-2-mobile .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-2-mobile .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-2-mobile .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-2-mobile .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-mobile .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-mobile .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-2-mobile .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-mobile .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-2-mobile .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-2-mobile .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-2-mobile .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-2-mobile .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-2-mobile .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-2-mobile .g-cstyle1 {
+		font-size:7px;
+	}
+
+</style>
+
+<div id="g-template-chart-2-2-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-template-chart-2-2-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-template-chart-2-2-medium-img" class="g-aiImg" alt="" src="template-chart-2-2-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:2.1646%;margin-top:-5.2px;left:73.7007%;width:50px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:3.7647%;left:20.0817%;width:52.9032%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.6706%;margin-top:-4.1px;left:74.059%;width:28px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.9314%;margin-top:-9px;left:73.7007%;width:81px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.6118%;margin-top:-4.1px;left:73.9893%;width:28px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.2277%;margin-top:-12.7px;left:73.7007%;width:93px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:31.7647%;left:74.0029%;width:2.2581%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.199%;margin-top:-10.1px;left:73.7061%;width:88px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.047%;margin-top:-5.2px;left:74.018%;width:29px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs" style="top:45.4118%;left:73.7007%;width:11.129%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs" style="top:59.2941%;left:73.9449%;width:2.4194%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs" style="top:63.2941%;left:73.7331%;width:11.6129%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:90.8235%;left:19.7886%;width:19.0323%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs" style="top:95.2941%;left:73.9859%;width:4.0323%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-template-chart-2-2-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-template-chart-2-2-laptop-img" class="g-aiImg" alt="" src="template-chart-2-2-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:1.989%;margin-top:-4px;left:72.7828%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:3.7143%;left:16.6986%;width:55.3061%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.5621%;margin-top:-3.5px;left:73.1573%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.8742%;margin-top:-7.1px;left:72.7828%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.4192%;margin-top:-3.5px;left:73.0845%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.9021%;margin-top:-10.2px;left:72.7828%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:31.4286%;left:73.0987%;width:2.449%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.1419%;margin-top:-8px;left:72.7884%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.989%;margin-top:-4px;left:73.1148%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs" style="top:45.1429%;left:72.7825%;width:11.6327%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs" style="top:59.1429%;left:73.0381%;width:2.449%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs" style="top:63.1429%;left:72.8165%;width:12.0408%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:90.5714%;left:16.3921%;width:20%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs" style="top:95.1429%;left:73.0809%;width:4.2857%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-template-chart-2-2-mobile" class="g-artboard" style="max-width: 375px;max-height: 405px" data-aspect-ratio="0.926" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 107.9467% 0;"></div>
+		<img id="g-template-chart-2-2-mobile-img" class="g-aiImg" alt="" src="template-chart-2-2-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.6604%;margin-top:-4px;left:80.1115%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:8.1522%;left:6.8281%;width:72.2667%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.6668%;margin-top:-3.5px;left:80.6008%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:19.5305%;margin-top:-7.1px;left:80.1115%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.3249%;margin-top:-3.5px;left:80.5057%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.4479%;margin-top:-10.2px;left:80.1115%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs" style="top:32.3617%;left:80.5243%;width:3.2%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.0545%;margin-top:-8px;left:80.1188%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.9747%;margin-top:-4px;left:80.5453%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs" style="top:44.2194%;left:80.1112%;width:15.2%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs" style="top:56.0771%;left:80.445%;width:3.2%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs" style="top:59.7826%;left:80.1556%;width:15.7333%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs" style="top:83.498%;left:6.4276%;width:26.1333%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs" style="top:87.4506%;left:80.501%;width:5.6%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2026-04-27 00:22 -->
+
+<!-- Generated by ai2html v0.102.0 - 2026-04-27 00:28 -->
+<!-- ai file: template-chart-2-3.ai -->
+<style media="screen,print">
+	#g-template-chart-2-3-box ,
+	#g-template-chart-2-3-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-template-chart-2-3-box p {
+		margin:0;
+	}
+	#g-template-chart-2-3-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-template-chart-2-3-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-template-chart-2-3-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-template-chart-2-3-box .g-aiPointText p { white-space: nowrap; }
+	#g-template-chart-2-3-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-3-medium p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:8px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-3-medium .g-pstyle0 {
+		height:8px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-3-medium .g-pstyle1 {
+		line-height:54px;
+		font-size:45px;
+	}
+	#g-template-chart-2-3-medium .g-pstyle2 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-3-medium .g-pstyle3 {
+		height:8px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-medium .g-pstyle4 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-medium .g-pstyle5 {
+		line-height:6px;
+		font-size:5px;
+	}
+	#g-template-chart-2-3-medium .g-pstyle6 {
+		line-height:9px;
+		height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-medium .g-pstyle7 {
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-3-medium .g-pstyle8 {
+		font-weight:700;
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-3-medium .g-pstyle9 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-medium .g-pstyle10 {
+		line-height:19px;
+		font-size:16px;
+	}
+	#g-template-chart-2-3-medium .g-pstyle11 {
+		line-height:32px;
+		font-size:27px;
+	}
+	#g-template-chart-2-3-medium .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-3-medium .g-cstyle1 {
+		font-size:9px;
+	}
+	#g-template-chart-2-3-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-3-laptop p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-3-laptop .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-3-laptop .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-3-laptop .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-3-laptop .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-laptop .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-laptop .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-3-laptop .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-laptop .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-3-laptop .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-3-laptop .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-laptop .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-3-laptop .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-3-laptop .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-3-laptop .g-cstyle1 {
+		font-size:7px;
+	}
+	#g-template-chart-2-3-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-3-mobile p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-3-mobile .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-3-mobile .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-3-mobile .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-3-mobile .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-mobile .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-mobile .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-3-mobile .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-mobile .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-3-mobile .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-3-mobile .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-3-mobile .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-3-mobile .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-3-mobile .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-3-mobile .g-cstyle1 {
+		font-size:7px;
+	}
+
+</style>
+
+<div id="g-template-chart-2-3-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-template-chart-2-3-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-template-chart-2-3-medium-img" class="g-aiImg" alt="" src="template-chart-2-3-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:2.1646%;margin-top:-5.2px;left:73.7007%;width:50px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:3.7647%;left:20.0817%;width:52.9032%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.6706%;margin-top:-4.1px;left:74.059%;width:28px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.9314%;margin-top:-9px;left:73.7007%;width:81px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.6118%;margin-top:-4.1px;left:73.9893%;width:28px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.2277%;margin-top:-12.7px;left:73.7007%;width:93px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:31.7647%;left:74.0029%;width:2.2581%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.199%;margin-top:-10.1px;left:73.7061%;width:88px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.047%;margin-top:-5.2px;left:74.018%;width:29px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs" style="top:45.4118%;left:73.7007%;width:11.129%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs" style="top:59.2941%;left:73.9449%;width:2.4194%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs" style="top:63.2941%;left:73.7331%;width:11.6129%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:90.8235%;left:19.7886%;width:19.0323%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs" style="top:95.2941%;left:73.9859%;width:4.0323%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-template-chart-2-3-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-template-chart-2-3-laptop-img" class="g-aiImg" alt="" src="template-chart-2-3-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:1.989%;margin-top:-4px;left:72.7828%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:3.7143%;left:16.6986%;width:55.3061%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.5621%;margin-top:-3.5px;left:73.1573%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.8742%;margin-top:-7.1px;left:72.7828%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.4192%;margin-top:-3.5px;left:73.0845%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.9021%;margin-top:-10.2px;left:72.7828%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:31.4286%;left:73.0987%;width:2.449%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.1419%;margin-top:-8px;left:72.7884%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.989%;margin-top:-4px;left:73.1148%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs" style="top:45.1429%;left:72.7825%;width:11.6327%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs" style="top:59.1429%;left:73.0381%;width:2.449%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs" style="top:63.1429%;left:72.8165%;width:12.0408%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:90.5714%;left:16.3921%;width:20%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs" style="top:95.1429%;left:73.0809%;width:4.2857%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-template-chart-2-3-mobile" class="g-artboard" style="max-width: 375px;max-height: 405px" data-aspect-ratio="0.926" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 107.9467% 0;"></div>
+		<img id="g-template-chart-2-3-mobile-img" class="g-aiImg" alt="" src="template-chart-2-3-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.6604%;margin-top:-4px;left:80.1115%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:8.1522%;left:6.8281%;width:72.2667%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.6668%;margin-top:-3.5px;left:80.6008%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:19.5305%;margin-top:-7.1px;left:80.1115%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.3249%;margin-top:-3.5px;left:80.5057%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.4479%;margin-top:-10.2px;left:80.1115%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs" style="top:32.3617%;left:80.5243%;width:3.2%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.0545%;margin-top:-8px;left:80.1188%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.9747%;margin-top:-4px;left:80.5453%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs" style="top:44.2194%;left:80.1112%;width:15.2%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs" style="top:56.0771%;left:80.445%;width:3.2%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs" style="top:59.7826%;left:80.1556%;width:15.7333%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs" style="top:83.498%;left:6.4276%;width:26.1333%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs" style="top:87.4506%;left:80.501%;width:5.6%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2026-04-27 00:28 -->
+
+<!-- Generated by ai2html v0.102.0 - 2026-04-27 00:30 -->
+<!-- ai file: template-chart-2-4.ai -->
+<style media="screen,print">
+	#g-template-chart-2-4-box ,
+	#g-template-chart-2-4-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-template-chart-2-4-box p {
+		margin:0;
+	}
+	#g-template-chart-2-4-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-template-chart-2-4-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-template-chart-2-4-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-template-chart-2-4-box .g-aiPointText p { white-space: nowrap; }
+	#g-template-chart-2-4-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-4-medium p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:8px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-4-medium .g-pstyle0 {
+		height:8px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-4-medium .g-pstyle1 {
+		line-height:54px;
+		font-size:45px;
+	}
+	#g-template-chart-2-4-medium .g-pstyle2 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-4-medium .g-pstyle3 {
+		height:8px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-medium .g-pstyle4 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-medium .g-pstyle5 {
+		line-height:6px;
+		font-size:5px;
+	}
+	#g-template-chart-2-4-medium .g-pstyle6 {
+		line-height:9px;
+		height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-medium .g-pstyle7 {
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-4-medium .g-pstyle8 {
+		font-weight:700;
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-4-medium .g-pstyle9 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-medium .g-pstyle10 {
+		line-height:19px;
+		font-size:16px;
+	}
+	#g-template-chart-2-4-medium .g-pstyle11 {
+		line-height:32px;
+		font-size:27px;
+	}
+	#g-template-chart-2-4-medium .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-4-medium .g-cstyle1 {
+		font-size:9px;
+	}
+	#g-template-chart-2-4-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-4-laptop p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-4-laptop .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-4-laptop .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-4-laptop .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-4-laptop .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-laptop .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-laptop .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-4-laptop .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-laptop .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-4-laptop .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-4-laptop .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-laptop .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-4-laptop .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-4-laptop .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-4-laptop .g-cstyle1 {
+		font-size:7px;
+	}
+	#g-template-chart-2-4-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-4-mobile p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-4-mobile .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-4-mobile .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-4-mobile .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-4-mobile .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-mobile .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-mobile .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-4-mobile .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-mobile .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-4-mobile .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-4-mobile .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-4-mobile .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-4-mobile .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-4-mobile .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-4-mobile .g-cstyle1 {
+		font-size:7px;
+	}
+
+</style>
+
+<div id="g-template-chart-2-4-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-template-chart-2-4-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-template-chart-2-4-medium-img" class="g-aiImg" alt="" src="template-chart-2-4-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:2.1646%;margin-top:-5.2px;left:73.7007%;width:50px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:3.7647%;left:20.0817%;width:52.9032%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.6706%;margin-top:-4.1px;left:74.059%;width:28px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.9314%;margin-top:-9px;left:73.7007%;width:81px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.6118%;margin-top:-4.1px;left:73.9893%;width:28px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.2277%;margin-top:-12.7px;left:73.7007%;width:93px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:31.7647%;left:74.0029%;width:2.2581%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.199%;margin-top:-10.1px;left:73.7061%;width:88px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.047%;margin-top:-5.2px;left:74.018%;width:29px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs" style="top:45.4118%;left:73.7007%;width:11.129%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs" style="top:59.2941%;left:73.9449%;width:2.4194%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs" style="top:63.2941%;left:73.7331%;width:11.6129%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:90.8235%;left:19.7886%;width:19.0323%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs" style="top:95.2941%;left:73.9859%;width:4.0323%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-template-chart-2-4-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-template-chart-2-4-laptop-img" class="g-aiImg" alt="" src="template-chart-2-4-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:1.989%;margin-top:-4px;left:72.7828%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:3.7143%;left:16.6986%;width:55.3061%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.5621%;margin-top:-3.5px;left:73.1573%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.8742%;margin-top:-7.1px;left:72.7828%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.4192%;margin-top:-3.5px;left:73.0845%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.9021%;margin-top:-10.2px;left:72.7828%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:31.4286%;left:73.0987%;width:2.449%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.1419%;margin-top:-8px;left:72.7884%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.989%;margin-top:-4px;left:73.1148%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs" style="top:45.1429%;left:72.7825%;width:11.6327%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs" style="top:59.1429%;left:73.0381%;width:2.449%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs" style="top:63.1429%;left:72.8165%;width:12.0408%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:90.5714%;left:16.3921%;width:20%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs" style="top:95.1429%;left:73.0809%;width:4.2857%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-template-chart-2-4-mobile" class="g-artboard" style="max-width: 375px;max-height: 405px" data-aspect-ratio="0.926" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 107.9467% 0;"></div>
+		<img id="g-template-chart-2-4-mobile-img" class="g-aiImg" alt="" src="template-chart-2-4-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.6604%;margin-top:-4px;left:80.1115%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:8.1522%;left:6.8281%;width:72.2667%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.6668%;margin-top:-3.5px;left:80.6008%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:19.5305%;margin-top:-7.1px;left:80.1115%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.3249%;margin-top:-3.5px;left:80.5057%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.4479%;margin-top:-10.2px;left:80.1115%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs" style="top:32.3617%;left:80.5243%;width:3.2%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.0545%;margin-top:-8px;left:80.1188%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.9747%;margin-top:-4px;left:80.5453%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs" style="top:44.2194%;left:80.1112%;width:15.2%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs" style="top:56.0771%;left:80.445%;width:3.2%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs" style="top:59.7826%;left:80.1556%;width:15.7333%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs" style="top:83.498%;left:6.4276%;width:26.1333%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs" style="top:87.4506%;left:80.501%;width:5.6%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2026-04-27 00:30 -->
+
+<!-- Generated by ai2html v0.102.0 - 2026-04-27 00:32 -->
+<!-- ai file: template-chart-2-5.ai -->
+<style media="screen,print">
+	#g-template-chart-2-5-box ,
+	#g-template-chart-2-5-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-template-chart-2-5-box p {
+		margin:0;
+	}
+	#g-template-chart-2-5-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-template-chart-2-5-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-template-chart-2-5-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-template-chart-2-5-box .g-aiPointText p { white-space: nowrap; }
+	#g-template-chart-2-5-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-5-medium p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:8px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-5-medium .g-pstyle0 {
+		height:8px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-5-medium .g-pstyle1 {
+		line-height:54px;
+		font-size:45px;
+	}
+	#g-template-chart-2-5-medium .g-pstyle2 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-5-medium .g-pstyle3 {
+		height:8px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-medium .g-pstyle4 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-medium .g-pstyle5 {
+		line-height:6px;
+		font-size:5px;
+	}
+	#g-template-chart-2-5-medium .g-pstyle6 {
+		line-height:9px;
+		height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-medium .g-pstyle7 {
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-5-medium .g-pstyle8 {
+		font-weight:700;
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-5-medium .g-pstyle9 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-medium .g-pstyle10 {
+		line-height:19px;
+		font-size:16px;
+	}
+	#g-template-chart-2-5-medium .g-pstyle11 {
+		line-height:32px;
+		font-size:27px;
+	}
+	#g-template-chart-2-5-medium .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-5-medium .g-cstyle1 {
+		font-size:9px;
+	}
+	#g-template-chart-2-5-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-5-laptop p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-5-laptop .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-5-laptop .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-5-laptop .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-5-laptop .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-laptop .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-laptop .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-5-laptop .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-laptop .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-5-laptop .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-5-laptop .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-laptop .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-5-laptop .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-5-laptop .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-5-laptop .g-cstyle1 {
+		font-size:7px;
+	}
+	#g-template-chart-2-5-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-5-mobile p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-5-mobile .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-5-mobile .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-5-mobile .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-5-mobile .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-mobile .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-mobile .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-5-mobile .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-mobile .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-5-mobile .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-5-mobile .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-5-mobile .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-5-mobile .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-5-mobile .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-5-mobile .g-cstyle1 {
+		font-size:7px;
+	}
+
+</style>
+
+<div id="g-template-chart-2-5-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-template-chart-2-5-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-template-chart-2-5-medium-img" class="g-aiImg" alt="" src="template-chart-2-5-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:2.1646%;margin-top:-5.2px;left:73.7007%;width:50px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:3.7647%;left:20.0817%;width:52.9032%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.6706%;margin-top:-4.1px;left:74.059%;width:28px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.9314%;margin-top:-9px;left:73.7007%;width:81px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.6118%;margin-top:-4.1px;left:73.9893%;width:28px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.2277%;margin-top:-12.7px;left:73.7007%;width:93px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:31.7647%;left:74.0029%;width:2.2581%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.199%;margin-top:-10.1px;left:73.7061%;width:88px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.047%;margin-top:-5.2px;left:74.018%;width:29px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs" style="top:45.4118%;left:73.7007%;width:11.129%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs" style="top:59.2941%;left:73.9449%;width:2.4194%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs" style="top:63.2941%;left:73.7331%;width:11.6129%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:90.8235%;left:19.7886%;width:19.0323%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs" style="top:95.2941%;left:73.9859%;width:4.0323%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-template-chart-2-5-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-template-chart-2-5-laptop-img" class="g-aiImg" alt="" src="template-chart-2-5-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:1.989%;margin-top:-4px;left:72.7828%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:3.7143%;left:16.6986%;width:55.3061%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.5621%;margin-top:-3.5px;left:73.1573%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.8742%;margin-top:-7.1px;left:72.7828%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.4192%;margin-top:-3.5px;left:73.0845%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.9021%;margin-top:-10.2px;left:72.7828%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:31.4286%;left:73.0987%;width:2.449%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.1419%;margin-top:-8px;left:72.7884%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.989%;margin-top:-4px;left:73.1148%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs" style="top:45.1429%;left:72.7825%;width:11.6327%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs" style="top:59.1429%;left:73.0381%;width:2.449%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs" style="top:63.1429%;left:72.8165%;width:12.0408%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:90.5714%;left:16.3921%;width:20%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs" style="top:95.1429%;left:73.0809%;width:4.2857%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-template-chart-2-5-mobile" class="g-artboard" style="max-width: 375px;max-height: 405px" data-aspect-ratio="0.926" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 107.9467% 0;"></div>
+		<img id="g-template-chart-2-5-mobile-img" class="g-aiImg" alt="" src="template-chart-2-5-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.6604%;margin-top:-4px;left:80.1115%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:8.1522%;left:6.8281%;width:72.2667%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.6668%;margin-top:-3.5px;left:80.6008%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:19.5305%;margin-top:-7.1px;left:80.1115%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.3249%;margin-top:-3.5px;left:80.5057%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.4479%;margin-top:-10.2px;left:80.1115%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs" style="top:32.3617%;left:80.5243%;width:3.2%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.0545%;margin-top:-8px;left:80.1188%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.9747%;margin-top:-4px;left:80.5453%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs" style="top:44.2194%;left:80.1112%;width:15.2%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs" style="top:56.0771%;left:80.445%;width:3.2%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs" style="top:59.7826%;left:80.1556%;width:15.7333%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs" style="top:83.498%;left:6.4276%;width:26.1333%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs" style="top:87.4506%;left:80.501%;width:5.6%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2026-04-27 00:32 -->
+
+<!-- Generated by ai2html v0.102.0 - 2026-04-27 00:39 -->
+<!-- ai file: template-chart-2-6.ai -->
+<style media="screen,print">
+	#g-template-chart-2-6-box ,
+	#g-template-chart-2-6-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-template-chart-2-6-box p {
+		margin:0;
+	}
+	#g-template-chart-2-6-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-template-chart-2-6-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-template-chart-2-6-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-template-chart-2-6-box .g-aiPointText p { white-space: nowrap; }
+	#g-template-chart-2-6-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-6-medium p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:8px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-6-medium .g-pstyle0 {
+		height:8px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-6-medium .g-pstyle1 {
+		line-height:54px;
+		font-size:45px;
+	}
+	#g-template-chart-2-6-medium .g-pstyle2 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-6-medium .g-pstyle3 {
+		height:8px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-medium .g-pstyle4 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-medium .g-pstyle5 {
+		line-height:6px;
+		font-size:5px;
+	}
+	#g-template-chart-2-6-medium .g-pstyle6 {
+		line-height:9px;
+		height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-medium .g-pstyle7 {
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-6-medium .g-pstyle8 {
+		font-weight:700;
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-6-medium .g-pstyle9 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-medium .g-pstyle10 {
+		line-height:19px;
+		font-size:16px;
+	}
+	#g-template-chart-2-6-medium .g-pstyle11 {
+		line-height:32px;
+		font-size:27px;
+	}
+	#g-template-chart-2-6-medium .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-6-medium .g-cstyle1 {
+		font-size:9px;
+	}
+	#g-template-chart-2-6-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-6-laptop p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-6-laptop .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-6-laptop .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-6-laptop .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-6-laptop .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-laptop .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-laptop .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-6-laptop .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-laptop .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-6-laptop .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-6-laptop .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-laptop .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-6-laptop .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-6-laptop .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-6-laptop .g-cstyle1 {
+		font-size:7px;
+	}
+	#g-template-chart-2-6-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-6-mobile p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-6-mobile .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-6-mobile .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-6-mobile .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-6-mobile .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-mobile .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-mobile .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-6-mobile .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-mobile .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-6-mobile .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-6-mobile .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-6-mobile .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-6-mobile .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-6-mobile .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-6-mobile .g-cstyle1 {
+		font-size:7px;
+	}
+
+</style>
+
+<div id="g-template-chart-2-6-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-template-chart-2-6-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-template-chart-2-6-medium-img" class="g-aiImg" alt="" src="template-chart-2-6-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:2.1646%;margin-top:-5.2px;left:73.7007%;width:50px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:3.7647%;left:20.0817%;width:52.9032%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.6706%;margin-top:-4.1px;left:74.059%;width:28px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.9314%;margin-top:-9px;left:73.7007%;width:81px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.6118%;margin-top:-4.1px;left:73.9893%;width:28px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.2277%;margin-top:-12.7px;left:73.7007%;width:93px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:31.7647%;left:74.0029%;width:2.2581%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.199%;margin-top:-10.1px;left:73.7061%;width:88px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.047%;margin-top:-5.2px;left:74.018%;width:29px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs" style="top:45.4118%;left:73.7007%;width:11.129%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs" style="top:59.2941%;left:73.9449%;width:2.4194%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs" style="top:63.2941%;left:73.7331%;width:11.6129%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:90.8235%;left:19.7886%;width:19.0323%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs" style="top:95.2941%;left:73.9859%;width:4.0323%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-template-chart-2-6-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-template-chart-2-6-laptop-img" class="g-aiImg" alt="" src="template-chart-2-6-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:1.989%;margin-top:-4px;left:72.7828%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:3.7143%;left:16.6986%;width:55.3061%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.5621%;margin-top:-3.5px;left:73.1573%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.8742%;margin-top:-7.1px;left:72.7828%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.4192%;margin-top:-3.5px;left:73.0845%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.9021%;margin-top:-10.2px;left:72.7828%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:31.4286%;left:73.0987%;width:2.449%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.1419%;margin-top:-8px;left:72.7884%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.989%;margin-top:-4px;left:73.1148%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs" style="top:45.1429%;left:72.7825%;width:11.6327%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs" style="top:59.1429%;left:73.0381%;width:2.449%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs" style="top:63.1429%;left:72.8165%;width:12.0408%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:90.5714%;left:16.3921%;width:20%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs" style="top:95.1429%;left:73.0809%;width:4.2857%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-template-chart-2-6-mobile" class="g-artboard" style="max-width: 375px;max-height: 405px" data-aspect-ratio="0.926" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 107.9467% 0;"></div>
+		<img id="g-template-chart-2-6-mobile-img" class="g-aiImg" alt="" src="template-chart-2-6-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.6604%;margin-top:-4px;left:80.1115%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:8.1522%;left:6.8281%;width:72.2667%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.6668%;margin-top:-3.5px;left:80.6008%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:19.5305%;margin-top:-7.1px;left:80.1115%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.3249%;margin-top:-3.5px;left:80.5057%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.4479%;margin-top:-10.2px;left:80.1115%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs" style="top:32.3617%;left:80.5243%;width:3.2%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.0545%;margin-top:-8px;left:80.1188%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.9747%;margin-top:-4px;left:80.5453%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs" style="top:44.2194%;left:80.1112%;width:15.2%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs" style="top:56.0771%;left:80.445%;width:3.2%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs" style="top:59.7826%;left:80.1556%;width:15.7333%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs" style="top:83.498%;left:6.4276%;width:26.1333%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs" style="top:87.4506%;left:80.501%;width:5.6%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2026-04-27 00:39 -->
+
+<!-- Generated by ai2html v0.102.0 - 2026-04-27 00:41 -->
+<!-- ai file: template-chart-2-7.ai -->
+<style media="screen,print">
+	#g-template-chart-2-7-box ,
+	#g-template-chart-2-7-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-template-chart-2-7-box p {
+		margin:0;
+	}
+	#g-template-chart-2-7-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-template-chart-2-7-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-template-chart-2-7-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-template-chart-2-7-box .g-aiPointText p { white-space: nowrap; }
+	#g-template-chart-2-7-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-7-medium p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:8px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-7-medium .g-pstyle0 {
+		height:8px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-7-medium .g-pstyle1 {
+		line-height:54px;
+		font-size:45px;
+	}
+	#g-template-chart-2-7-medium .g-pstyle2 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-7-medium .g-pstyle3 {
+		height:8px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-medium .g-pstyle4 {
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-medium .g-pstyle5 {
+		line-height:6px;
+		font-size:5px;
+	}
+	#g-template-chart-2-7-medium .g-pstyle6 {
+		line-height:9px;
+		height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-medium .g-pstyle7 {
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-7-medium .g-pstyle8 {
+		font-weight:700;
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-template-chart-2-7-medium .g-pstyle9 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-medium .g-pstyle10 {
+		line-height:19px;
+		font-size:16px;
+	}
+	#g-template-chart-2-7-medium .g-pstyle11 {
+		line-height:32px;
+		font-size:27px;
+	}
+	#g-template-chart-2-7-medium .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-7-medium .g-cstyle1 {
+		font-size:9px;
+	}
+	#g-template-chart-2-7-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-7-laptop p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-7-laptop .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-7-laptop .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-7-laptop .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-7-laptop .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-laptop .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-laptop .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-7-laptop .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-laptop .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-7-laptop .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-7-laptop .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-laptop .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-7-laptop .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-7-laptop .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-7-laptop .g-cstyle1 {
+		font-size:7px;
+	}
+	#g-template-chart-2-7-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-template-chart-2-7-mobile p {
+		font-family:helvetica,arial,sans-serif;
+		font-weight:bold;
+		line-height:6px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-template-chart-2-7-mobile .g-pstyle0 {
+		height:6px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-7-mobile .g-pstyle1 {
+		line-height:44px;
+		font-size:37px;
+	}
+	#g-template-chart-2-7-mobile .g-pstyle2 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+		color:rgb(138,175,196);
+	}
+	#g-template-chart-2-7-mobile .g-pstyle3 {
+		height:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-mobile .g-pstyle4 {
+		line-height:5px;
+		height:5px;
+		font-size:4px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-mobile .g-pstyle5 {
+		line-height:5px;
+		font-size:4px;
+	}
+	#g-template-chart-2-7-mobile .g-pstyle6 {
+		line-height:7px;
+		height:7px;
+		font-size:6px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-mobile .g-pstyle7 {
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-7-mobile .g-pstyle8 {
+		font-weight:700;
+		line-height:11px;
+		font-size:9px;
+	}
+	#g-template-chart-2-7-mobile .g-pstyle9 {
+		font-weight:700;
+		line-height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+	#g-template-chart-2-7-mobile .g-pstyle10 {
+		line-height:16px;
+		font-size:13px;
+	}
+	#g-template-chart-2-7-mobile .g-pstyle11 {
+		line-height:27px;
+		font-size:22px;
+	}
+	#g-template-chart-2-7-mobile .g-cstyle0 {
+		font-weight:700;
+	}
+	#g-template-chart-2-7-mobile .g-cstyle1 {
+		font-size:7px;
+	}
+
+</style>
+
+<div id="g-template-chart-2-7-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-template-chart-2-7-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-template-chart-2-7-medium-img" class="g-aiImg" alt="" src="template-chart-2-7-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:2.1646%;margin-top:-5.2px;left:73.7007%;width:50px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:3.7647%;left:20.0817%;width:52.9032%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.6706%;margin-top:-4.1px;left:74.059%;width:28px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.9314%;margin-top:-9px;left:73.7007%;width:81px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.6118%;margin-top:-4.1px;left:73.9893%;width:28px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.2277%;margin-top:-12.7px;left:73.7007%;width:93px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:31.7647%;left:74.0029%;width:2.2581%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.199%;margin-top:-10.1px;left:73.7061%;width:88px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.047%;margin-top:-5.2px;left:74.018%;width:29px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs" style="top:45.4118%;left:73.7007%;width:11.129%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs" style="top:59.2941%;left:73.9449%;width:2.4194%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs" style="top:63.2941%;left:73.7331%;width:11.6129%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:90.8235%;left:19.7886%;width:19.0323%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs" style="top:95.2941%;left:73.9859%;width:4.0323%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-template-chart-2-7-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-template-chart-2-7-laptop-img" class="g-aiImg" alt="" src="template-chart-2-7-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:1.989%;margin-top:-4px;left:72.7828%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:3.7143%;left:16.6986%;width:55.3061%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.5621%;margin-top:-3.5px;left:73.1573%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.8742%;margin-top:-7.1px;left:72.7828%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.4192%;margin-top:-3.5px;left:73.0845%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.9021%;margin-top:-10.2px;left:72.7828%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:31.4286%;left:73.0987%;width:2.449%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.1419%;margin-top:-8px;left:72.7884%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.989%;margin-top:-4px;left:73.1148%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs" style="top:45.1429%;left:72.7825%;width:11.6327%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs" style="top:59.1429%;left:73.0381%;width:2.449%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs" style="top:63.1429%;left:72.8165%;width:12.0408%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:90.5714%;left:16.3921%;width:20%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs" style="top:95.1429%;left:73.0809%;width:4.2857%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-template-chart-2-7-mobile" class="g-artboard" style="max-width: 375px;max-height: 405px" data-aspect-ratio="0.926" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 107.9467% 0;"></div>
+		<img id="g-template-chart-2-7-mobile-img" class="g-aiImg" alt="" src="template-chart-2-7-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.6604%;margin-top:-4px;left:80.1115%;width:45px;">
+			<p class="g-pstyle0">Unknown</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:8.1522%;left:6.8281%;width:72.2667%;">
+			<p class="g-pstyle1">Violence with heavy </p>
+			<p class="g-pstyle1">weapons<span class="g-cstyle0"> </span></p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.6668%;margin-top:-3.5px;left:80.6008%;width:27px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:19.5305%;margin-top:-7.1px;left:80.1115%;width:70px;">
+			<p class="g-pstyle3">Obstruction to </p>
+			<p class="g-pstyle3">health care delivery</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.3249%;margin-top:-3.5px;left:80.5057%;width:27px;">
+			<p class="g-pstyle4">56</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.4479%;margin-top:-10.2px;left:80.1115%;width:80px;">
+			<p class="g-pstyle3">Psychological violence,</p>
+			<p class="g-pstyle3">threat of violence,</p>
+			<p class="g-pstyle3">intimidation</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs" style="top:32.3617%;left:80.5243%;width:3.2%;">
+			<p class="g-pstyle5">60</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.0545%;margin-top:-8px;left:80.1188%;width:77px;">
+			<p class="g-pstyle6">Violence with </p>
+			<p class="g-pstyle6">individual weapons</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.9747%;margin-top:-4px;left:80.5453%;width:28px;">
+			<p class="g-pstyle3">70</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs" style="top:44.2194%;left:80.1112%;width:15.2%;">
+			<p class="g-pstyle7">Militarization of a health</p>
+			<p class="g-pstyle8">care asset<span class="g-cstyle1"> </span></p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs" style="top:56.0771%;left:80.445%;width:3.2%;">
+			<p class="g-pstyle9">103</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs" style="top:59.7826%;left:80.1556%;width:15.7333%;">
+			<p class="g-pstyle10">Removal <span class="g-cstyle0">of health </span>care assets</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs" style="top:83.498%;left:6.4276%;width:26.1333%;">
+			<p class="g-pstyle11">2655</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs" style="top:87.4506%;left:80.501%;width:5.6%;">
+			<p class="g-pstyle7">225</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2026-04-27 00:41 -->
+
+</div>
+            <button class="chart2-arrow" id="chart2-next" aria-label="Next">&#8594;</button>
+        </div>
+        <div id="chart2-descriptions">
+            <div class="chart2-desc active" data-index="0"></div>
+            <div class="chart2-desc" data-index="1">
+                <p><strong>Violence with heavy weapons</strong></p>
+                <p>Violence with heavy weapons — including firearms, tanks, missiles, bombs, and mortars — has been documented <span class="stat">2,655</span> times since the start of the war. This figure shows that attacks on healthcare are not rarely isolated incidents but part of broader military operations.</p>
+            </div>
+            <div class="chart2-desc" data-index="2">
+                <p><strong>Removal of health care assets</strong></p>
+                <p>In <span class="stat">225</span> cases, the target was the removal of healthcare assets — including transport, supplies, and materials. In one documented case, the <a href="https://phr.org/our-work/resources/russias-assault-on-ukraines-health-care-system/">Mariupol City Council</a> reported that around <span class="stat">60</span> ventilators had been stolen from city hospitals, equipment that was critical at the height of the Covid pandemic. Intentional attacks on healthcare infrastructure are violations of the laws of war under the Geneva Convention.</p>
+            </div>
+            <div class="chart2-desc" data-index="3">
+                <p><strong>Militarization of a health care asset</strong></p>
+                <p>In <span class="stat">103</span> cases, the WHO recorded militarization of a healthcare asset — when military forces use a medical facility for non-medical purposes, such as a command post, barracks, or weapons storage site. Under international humanitarian law, this strips the facility of its protected status.</p>
+            </div>
+            <div class="chart2-desc" data-index="4">
+                <p><strong>Violence with individual weapons</strong></p>
+                <p>Violence with individual weapons, recorded <span class="stat">70</span> times, involves the use of knives, bricks, clubs, guns, grenades, and improvised explosive devices (IEDs).</p>
+            </div>
+            <div class="chart2-desc" data-index="5">
+                <p><strong>Psychological violence, threat of violence, intimidation</strong></p>
+                <p>The WHO recorded <span class="stat">60</span> cases of psychological violence, threats, and intimidation directed at healthcare workers or patients.</p>
+            </div>
+            <div class="chart2-desc" data-index="6">
+                <p><strong>Obstruction to health care delivery</strong></p>
+                <p>In <span class="stat">56</span> cases, attacks were classified as obstruction of healthcare delivery — a category that can take physical, administrative, or legal forms.</p>
+            </div>
+            <div class="chart2-desc" data-index="7">
+                <p><strong>Others</strong></p>
+                <p>The remaining attacks fall into smaller or unclassified categories: <span class="stat">40</span> cases where the nature of the attack is unknown, plus armed searches of medical personnel (<span class="stat">19</span>), abductions or detentions of health workers and patients (<span class="stat">19</span>), assaults without weapons (<span class="stat">4</span>), arson (<span class="stat">3</span>), and one unspecified incident.</p>
             </div>
         </div>
-        <div class="steps-container">
-            <div class="step" id="c2-step-intro" style="min-height: 1px;"></div>
-            <div class="step" id="c2-step-heavy">
-                <div>
-                    <p><strong>Violence with heavy weapons</strong></p>
-                    <p>Violence with heavy weapons — including firearms, tanks, missiles, bombs, and mortars — is the most frequently recorded category. Documented <span class="stat">2,655</span> times since the start of the war, the figure points to healthcare attacks being rarely isolated incidents but part of broader military operations.</p>
-                </div>
-            </div>
-            <div class="step" id="c2-step-removal">
-                <div>
-                    <p><strong>Removal of health care assets</strong></p>
-                    <p>In <span class="stat">225</span> cases, the target was the removal of healthcare assets — including transport, supplies, and materials. In one documented case, the <a href="https://phr.org/our-work/resources/russias-assault-on-ukraines-health-care-system/">Mariupol City Council</a> reported that around <span class="stat">60</span> ventilators had been stolen from city hospitals, equipment that was critical at the height of the Covid pandemic.</p>
-                </div>
-            </div>
-            <div class="step" id="c2-step-militarization">
-                <div>
-                    <p><strong>Militarization of a health care asset</strong></p>
-                    <p>In <span class="stat">103</span> cases, WHO recorded militarization of a healthcare asset — when military forces use a medical facility for non-medical purposes, such as a command post, barracks, or weapons storage site. Under international humanitarian law, this strips the facility of its protected status.</p>
-                </div>
-            </div>
-            <div class="step" id="c2-step-individual">
-                <div>
-                    <p><strong>Violence with individual weapons</strong></p>
-                    <p>Violence with individual weapons, recorded <span class="stat">70</span> times, involves the use of knives, bricks, clubs, guns, grenades, and improvised explosive devices (IEDs).</p>
-                </div>
-            </div>
-            <div class="step" id="c2-step-psychological">
-                <div>
-                    <p><strong>Psychological violence, threat of violence, intimidation</strong></p>
-                    <p>WHO recorded <span class="stat">60</span> cases of psychological violence, threats, and intimidation directed at healthcare workers or patients.</p>
-                </div>
-            </div>
-            <div class="step" id="c2-step-obstruction">
-                <div>
-                    <p><strong>Obstruction to health care delivery</strong></p>
-                    <p>In <span class="stat">56</span> cases, attacks were classified as obstruction of healthcare delivery — a category that can take physical, administrative, or legal forms.</p>
-                </div>
-            </div>
-            <div class="step" id="c2-step-others">
-                <div>
-                    <p><strong>Others</strong></p>
-                    <p>The remaining attacks fall into smaller or unclassified categories: <span class="stat">40</span> cases where the nature of the attack is unknown, plus armed searches of medical personnel (<span class="stat">19</span>), abductions or detentions of health workers and patients (<span class="stat">19</span>), assaults without weapons (<span class="stat">4</span>), arson (<span class="stat">3</span>), and one unspecified incident.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <section id="scrolly-photo" class="scrolly-container photo-scrolly">
         <div class="sticky-thing photo-sticky">
-            <img src="ukraine_attacks_on_healthcare.png" class="photo-bg" alt="A woman and child shelter in a basement in Ukraine">
+            <img src="ukraine_attacks_on_healthcare.JPG" class="photo-bg" alt="A woman and child shelter in a basement in Ukraine">
         </div>
         <div class="steps-container">
             <div class="step photo-step" id="photo-step-one">
@@ -938,11 +4491,16 @@
             </div>
             <div class="step photo-step" id="photo-step-two">
                 <div class="photo-text-box">
-                    <p>Now Ukrainians are living with the aftermath of the coldest winters the country has seen in over a decade.</p>
+                    <p>Now Ukrainians are enduring the aftermath of the coldest winters the country has seen in over a decade.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="content">
+        <p>This is not the first time that Ukraine has faced attacks on their healthcare infrastructure by Russia. Habicht et al. point out that Ukraine implemented a package of reforms to their healthcare system following the Russian invasion of Crimea in 2014 and in anticipation of future attacks. Radical changes were made when it comes to delivering and financing care such as tying payments to actual services rather than aging infrastructure, and guaranteeing every resident access to a family doctor free of charge. By February 2022, 32.5 million Ukrainians — 82% of the population — were enrolled. When the invasion began, those systems proved unexpectedly resilient.</p>
+    </div>
+
     <style>
         .hidden {
             display: none;
@@ -1030,39 +4588,64 @@
             color: #8AAFC4;
         }
 
-        /* Chart 2 — two column layout on desktop */
-        @media (min-width: 768px) {
-            #scrolly-chart2 {
-                display: flex;
-                align-items: flex-start;
-            }
+        /* Chart 2 — click-based navigation */
+        #chart2-section {
+            max-width: 840px;
+            margin: 2em auto;
+            padding: 0 1em;
+            box-sizing: border-box;
+        }
 
-            #scrolly-chart2 .sticky-thing {
-                flex: 0 0 50%;
-                order: 2;
-                position: sticky;
-                top: 0;
-                height: 100vh;
-            }
+        #chart2-interactive {
+            display: flex;
+            align-items: center;
+            gap: 0.75em;
+        }
 
-            #scrolly-chart2 .steps-container {
-                flex: 0 0 50%;
-                order: 1;
-                margin-top: 0 !important;
-                padding-top: 10vh;
-                padding-bottom: 80vh;
-            }
+        #chart2-wrapper {
+            flex: 1;
+            min-width: 0;
+            padding: 0;
+            max-width: 100%;
+        }
 
-            #scrolly-chart2 .step {
-                padding-left: 1em;
-                padding-right: 1em;
-                justify-content: center;
-            }
+        .chart2-arrow {
+            background: none;
+            border: 2px solid #8AAFC4;
+            border-radius: 50%;
+            color: #8AAFC4;
+            font-size: 1.4em;
+            width: 2.2em;
+            height: 2.2em;
+            cursor: pointer;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, color 0.2s;
+        }
 
-            #scrolly-chart2 .step > div {
-                width: 100%;
-                max-width: none;
-            }
+        .chart2-arrow:hover:not(:disabled) {
+            background: #8AAFC4;
+            color: #1a1a1a;
+        }
+
+        .chart2-arrow:disabled {
+            opacity: 0.25;
+            cursor: default;
+        }
+
+        #chart2-descriptions {
+            margin: 1.2em 2.95em 0;
+            min-height: 4em;
+        }
+
+        .chart2-desc {
+            display: none;
+        }
+
+        .chart2-desc.active {
+            display: block;
         }
 
         /* Photo scrolly */
@@ -1071,6 +4654,20 @@
             height: 100vh;
             margin-left: calc(-50vw + 50%);
             overflow: hidden;
+        }
+
+        .photo-sticky::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.52);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .photo-sticky.overlay-active::after {
+            opacity: 1;
         }
 
         .photo-bg {
@@ -1086,8 +4683,20 @@
             padding: 1.5em 2em;
         }
 
+        .photo-step > div {
+            background: transparent;
+        }
+
         .photo-text-box {
             max-width: 480px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .photo-text-box.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 
@@ -1166,53 +4775,105 @@
     </script>
 
     <script>
-        /* Chart 2 — swap image src on each step */
-        const c2img = document.getElementById('g-chart_2-Obszar_roboczy_1-img');
+        /* Chart 2 — click-based navigation */
+        const chart2Boxes = [
+            document.getElementById('g-template-chart-2-main-box'),
+            document.getElementById('g-template-chart-2-1-box'),
+            document.getElementById('g-template-chart-2-2-box'),
+            document.getElementById('g-template-chart-2-3-box'),
+            document.getElementById('g-template-chart-2-4-box'),
+            document.getElementById('g-template-chart-2-5-box'),
+            document.getElementById('g-template-chart-2-6-box'),
+            document.getElementById('g-template-chart-2-7-box'),
+        ];
+        const chart2Descs = document.querySelectorAll('.chart2-desc');
+        const chart2Prev = document.getElementById('chart2-prev');
+        const chart2Next = document.getElementById('chart2-next');
+        let chart2Index = 0;
 
         function showChart2(n) {
-            c2img.src = n === 0 ? 'chart_2-Obszar_roboczy_1.png' : 'chart_2_' + n + '-Obszar_roboczy_1.png';
+            chart2Boxes.forEach((box, i) => box.style.display = i === n ? 'block' : 'none');
+            chart2Descs.forEach((desc, i) => desc.classList.toggle('active', i === n));
+            chart2Prev.disabled = n === 0;
+            chart2Next.disabled = n === chart2Boxes.length - 1;
+            chart2Index = n;
+            // Trigger the ai2html resizer so it picks the right artboard size
+            window.dispatchEvent(new Event('resize'));
         }
+
+        chart2Prev.addEventListener('click', () => { if (chart2Index > 0) showChart2(chart2Index - 1); });
+        chart2Next.addEventListener('click', () => { if (chart2Index < chart2Boxes.length - 1) showChart2(chart2Index + 1); });
 
         showChart2(0);
 
-        d3.select("#c2-step-intro").on("stepin",  () => showChart2(0));
-        d3.select("#c2-step-intro").on("stepout", e => { if (e.detail.direction === 'up') showChart2(0); });
-
-        d3.select("#c2-step-heavy").on("stepin",  () => showChart2(1));
-        d3.select("#c2-step-heavy").on("stepout", e => { if (e.detail.direction === 'up') showChart2(0); });
-
-        d3.select("#c2-step-removal").on("stepin",        () => showChart2(2));
-        d3.select("#c2-step-militarization").on("stepin", () => showChart2(3));
-        d3.select("#c2-step-individual").on("stepin",     () => showChart2(4));
-        d3.select("#c2-step-psychological").on("stepin",  () => showChart2(5));
-        d3.select("#c2-step-obstruction").on("stepin",    () => showChart2(6));
-        d3.select("#c2-step-others").on("stepin",         () => showChart2(7));
+        // Lock the description area height to the tallest panel so content below never jumps
+        window.addEventListener('load', () => {
+            const container = document.getElementById('chart2-descriptions');
+            let maxH = 0;
+            chart2Descs.forEach(desc => {
+                desc.style.display = 'block';
+                maxH = Math.max(maxH, desc.offsetHeight);
+                desc.style.display = '';
+            });
+            container.style.minHeight = maxH + 'px';
+        });
     </script>
 
     <script>
-        /* Scrollama instance for chart 2 */
+        /* Photo scrolly
+           - step-one enters:  overlay + box1 fade in
+           - step-two enters:  box1 swaps out, box2 fades in (overlay stays)
+           - scrolling back up restores the correct state at each step
+        */
         (() => {
-            const scroller2 = scrollama();
-            scroller2
+            const photoSticky = document.querySelector('.photo-sticky');
+            const box1 = document.querySelector('#photo-step-one .photo-text-box');
+            const box2 = document.querySelector('#photo-step-two .photo-text-box');
+
+            d3.select('#photo-step-one').on('stepin', () => {
+                photoSticky.classList.add('overlay-active');
+                box1.classList.add('visible');
+                box2.classList.remove('visible');
+            });
+
+            d3.select('#photo-step-one').on('stepout', (e) => {
+                if (e.detail.direction === 'up') {
+                    photoSticky.classList.remove('overlay-active');
+                    box1.classList.remove('visible');
+                }
+                // scrolling down: keep box1 visible until step-two's stepin fires
+            });
+
+            d3.select('#photo-step-two').on('stepin', () => {
+                photoSticky.classList.add('overlay-active');
+                box1.classList.remove('visible');
+                box2.classList.add('visible');
+            });
+
+            d3.select('#photo-step-two').on('stepout', (e) => {
+                if (e.detail.direction === 'up') {
+                    box2.classList.remove('visible');
+                }
+                // scrolling down: past the section, nothing to do
+            });
+
+            const scrollerPhoto = scrollama();
+            scrollerPhoto
                 .setup({
-                    parent: document.querySelector("#scrolly-chart2"),
-                    step: ".step",
+                    parent: document.querySelector('#scrolly-photo'),
+                    step: '.step',
                     offset: 0.6,
-                    debug: false,
                 })
-                .onStepEnter(function ({ element, index, direction }) {
-                    const event = new CustomEvent("stepin", { detail: { direction: direction } });
-                    element.dispatchEvent(event);
+                .onStepEnter(({ element, direction }) => {
+                    element.dispatchEvent(new CustomEvent('stepin', { detail: { direction } }));
                 })
-                .onStepExit(function ({ element, index, direction }) {
-                    const event = new CustomEvent("stepout", { detail: { direction: direction } });
-                    element.dispatchEvent(event);
-                    if (direction === "up" && element.previousElementSibling) {
-                        const event2 = new CustomEvent("stepin", { detail: { direction: direction } });
-                        element.previousElementSibling.dispatchEvent(event2);
+                .onStepExit(({ element, direction }) => {
+                    element.dispatchEvent(new CustomEvent('stepout', { detail: { direction } }));
+                    if (direction === 'up' && element.previousElementSibling) {
+                        element.previousElementSibling.dispatchEvent(new CustomEvent('stepin', { detail: { direction } }));
                     }
                 });
-            window.addEventListener("resize", scroller2.resize);
+            window.addEventListener('resize', scrollerPhoto.resize);
         })();
     </script>
 
@@ -1237,6 +4898,8 @@
             window.addEventListener('scroll', onScroll, { passive: true });
         })();
     </script>
+    <div class="footer"></div>
+
 </body>
 
 </html>
