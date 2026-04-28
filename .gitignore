@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Trash folder (review before deleting)
+_trash/
